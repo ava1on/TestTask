@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ava1on</groupId>
+    <artifactId>testTaskForPeterService</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>steps-module</module>
+        <module>tests-module</module>
+    </modules>
+
+    <properties>
+        <compiler.version>1.8</compiler.version>
+        <allure.version>1.4.23</allure.version>
+        <selenium.version>2.53.1</selenium.version>
+        <aspectj.version>1.8.5</aspectj.version>
+        <htmlelements.veriosn>1.18</htmlelements.veriosn>
+        <common-nang3.version>3.4</common-nang3.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>xml-apis</artifactId>
+                    <groupId>xml-apis</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common-nang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ru.yandex.qatools.htmlelements</groupId>
+                <artifactId>htmlelements-java</artifactId>
+                <version>${htmlelements.veriosn}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
